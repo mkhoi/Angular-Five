@@ -26,4 +26,8 @@ export class UserService implements IUserService {
         let users = this.http.get(this.urlUser, this.options).map(this.extractData).catch(this.handleError);
         return users;
     }
+
+    public addNewUser(user: User): Observable<User> {
+        return this.http.post(this.urlUser, user, this.options).map(this.extractData).catch(this.handleError);
+    }
 }
