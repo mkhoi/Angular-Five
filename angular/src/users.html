@@ -16,6 +16,9 @@
                 <td>{{user.firstName}}</td>
                 <td>{{user.lastName}}</td>
                 <td>{{user.userName}}</td>
+                <td>
+                    <a title="Edit" (click)="onEditClicked(user.id)"><i class="fa fa-edit"></i></a>
+                </td>
             </tr> 
         </tbody>
     </table>
